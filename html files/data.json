@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "product_name": "Smartphone",
+      "product_description": "A high-end smartphone with a powerful processor and stunning display.",
+      "price": 699.99
+    },
+    {
+      "product_name": "Laptop",
+      "product_description": "A sleek and lightweight laptop perfect for work and play.",
+      "price": 999.99
+    },
+    {
+      "product_name": "Smart TV",
+      "product_description": "A 55-inch smart TV with 4K resolution and built-in streaming apps.",
+      "price": 599.99
+    },
+    {
+      "product_name": "Wireless Headphones",
+      "product_description": "Noise-canceling wireless headphones with long battery life.",
+      "price": 199.99
+    },
+    {
+      "product_name": "Smartwatch",
+      "product_description": "A stylish smartwatch with fitness tracking and notifications.",
+      "price": 249.99
+    },
+    {
+      "product_name": "Bluetooth Speaker",
+      "product_description": "A portable Bluetooth speaker with excellent sound quality.",
+      "price": 129.99
+    },
+    {
+      "product_name": "Gaming Console",
+      "product_description": "A next-gen gaming console with a vast library of games.",
+      "price": 499.99
+    },
+    {
+      "product_name": "Tablet",
+      "product_description": "A versatile tablet with a large display and high performance.",
+      "price": 299.99
+    },
+    {
+      "product_name": "Digital Camera",
+      "product_description": "A compact digital camera with impressive zoom and image quality.",
+      "price": 349.99
+    },
+    {
+      "product_name": "E-Reader",
+      "product_description": "A lightweight e-reader with a glare-free screen and long battery life.",
+      "price": 119.99
+    }
+  ]
+}
