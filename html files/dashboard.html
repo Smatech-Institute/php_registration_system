@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h2 class="mt-5">Welcome, <?php echo $_SESSION['username']; ?>!</h2>
+    <p>This is your dashboard.</p>
+    <a href="logout.php" class="btn btn-danger">Logout</a>
+
+    <h3 class="mt-5">Products</h3>
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+              <td>1</td>
+              <td>Tshirt</td>
+              <td>Blue tshirt</td>
+              <td>50</td>
+              <td>
+                <a href='#' class='btn btn-warning'>Edit</a>
+                <a href='#' class='btn btn-danger'>Delete</a>
+              </td>
+            </tr>";
+      </tbody>
+    </table>
+    <a href="create_product.php" class="btn btn-primary mt-3">Create Product</a>
+  </div>
+</body>
+</html>

@@ -82,15 +82,15 @@ $conn->close();
       <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
       <div class="form-group">
         <label for="name">Product Name:</label>
-        <input type="text" class="form-control" id="name" name="name" value="<?php echo $product['name']; ?>">
+        <input type="text" class="form-control" name="name" value="<?php echo $product['name']; ?>">
       </div>
       <div class="form-group">
         <label for="description">Description:</label>
-        <textarea class="form-control" id="description" name="description"><?php echo $product['description']; ?></textarea>
+        <textarea class="form-control" name="description"><?php echo $product['description']; ?></textarea>
       </div>
       <div class="form-group">
         <label for="price">Price:</label>
-        <input type="number" step="0.01" class="form-control" id="price" name="price" value="<?php echo $product['price']; ?>">
+        <input type="number" step="0.01" class="form-control" name="price" value="<?php echo $product['price']; ?>">
       </div>
       <button type="submit" class="btn btn-primary">Update Product</button>
     </form>
