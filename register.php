@@ -1,12 +1,6 @@
 <?php
+$conn->select_db("user_database");
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "user_database";
-
-  $conn = new mysqli($servername, $username, $password, $dbname);
-
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
@@ -15,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $pass = password_hash($_POST['password'], PASSWORD_BCRYPT);
   $email = $_POST['email'];
 
+  $conn->select_db("user_database");
   $sql = "INSERT INTO users (username, password, email) VALUES ('$user', '$pass', '$email')";
 
   if ($conn->query($sql) === TRUE) {

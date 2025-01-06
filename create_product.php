@@ -1,4 +1,5 @@
 <?php
+include('db_connection.php');
 session_start();
 
 if (!isset($_SESSION['username'])) {
@@ -7,21 +8,13 @@ if (!isset($_SESSION['username'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "user_database";
-
-  $conn = new mysqli($servername, $username, $password, $dbname);
-
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
 
   $name = $_POST['name'];
   $description = $_POST['description'];
   $price = $_POST['price'];
 
+  // Select the database
+  $conn->select_db("user_database");
   $sql = "INSERT INTO products (name, description, price) VALUES ('$name', '$description', '$price')";
 
   if ($conn->query($sql) === TRUE) {

@@ -1,20 +1,10 @@
 <?php
+include('db_connection.php');
 session_start();
 
 if (!isset($_SESSION['username'])) {
   header("Location: login.php");
   exit();
-}
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "user_database";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -23,6 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $description = $_POST['description'];
   $price = $_POST['price'];
 
+  // Select the database
+  $conn->select_db("user_database");
   $sql = "UPDATE products SET ";
   $updates = [];
 

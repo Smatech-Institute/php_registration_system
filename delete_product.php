@@ -1,4 +1,5 @@
 <?php
+$conn->select_db("user_database");
 session_start();
 
 if (!isset($_SESSION['username'])) {
@@ -6,18 +7,9 @@ if (!isset($_SESSION['username'])) {
   exit();
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "user_database";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
 $id = $_GET['id'];
+
+$conn->select_db("user_database");
 $sql = "DELETE FROM products WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
