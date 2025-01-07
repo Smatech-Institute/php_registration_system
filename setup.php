@@ -41,7 +41,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 //Add Products
-$sql = "INSERT INTO products (product_name, product_description, price) VALUES
+$sql = "INSERT INTO products (name, description, price) VALUES
   ('Smartphone', 'A high-end smartphone with a powerful processor and stunning display.', 699.99),
   ('Laptop', 'A sleek and lightweight laptop perfect for work and play.', 999.99),
   ('Smart TV', 'A 55-inch smart TV with 4K resolution and built-in streaming apps.', 599.99),
