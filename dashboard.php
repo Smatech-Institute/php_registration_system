@@ -1,4 +1,5 @@
 <?php
+include('db_connection.php');
 session_start();
 
 if (!isset($_SESSION['username'])) {
@@ -6,17 +7,7 @@ if (!isset($_SESSION['username'])) {
   exit();
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "user_database";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
+$conn->select_db("user_database");
 $sql = "SELECT * FROM products";
 $result = $conn->query($sql);
 

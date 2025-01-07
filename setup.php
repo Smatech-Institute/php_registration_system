@@ -40,5 +40,19 @@ if ($conn->query($sql) === TRUE) {
   echo "Error creating table products: " . $conn->error;
 }
 
+//Add Products
+$sql = "INSERT INTO products (product_name, product_description, price) VALUES
+  ('Smartphone', 'A high-end smartphone with a powerful processor and stunning display.', 699.99),
+  ('Laptop', 'A sleek and lightweight laptop perfect for work and play.', 999.99),
+  ('Smart TV', 'A 55-inch smart TV with 4K resolution and built-in streaming apps.', 599.99),
+  ('Wireless Headphones', 'Noise-canceling wireless headphones with long battery life.', 199.99),
+  ('Smartwatch', 'A stylish smartwatch with fitness tracking and notifications.', 249.99),
+  ('Bluetooth Speaker', 'A portable Bluetooth speaker with excellent sound quality.', 129.99),
+  ('Gaming Console', 'A next-gen gaming console with a vast library of games.', 499.99),
+  ('Tablet', 'A versatile tablet with a large display and high performance.', 299.99),
+  ('Digital Camera', 'A compact digital camera with impressive zoom and image quality.', 349.99),
+  ('E-Reader', 'A lightweight e-reader with a glare-free screen and long battery life.', 119.99);
+";
+
 $conn->close();
 ?>
